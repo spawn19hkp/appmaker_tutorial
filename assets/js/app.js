@@ -313,8 +313,56 @@
     });
   }
 
+  function initLazyVideo(){
+    const ratios = document.querySelectorAll(".video .ratio");
+    if (!ratios.length) return;
+
+    const hidePlaceholder = placeholder => {
+      if (!placeholder) return;
+      placeholder.classList.add("hidden");
+      placeholder.style.display = "none";
+    };
+
+    const loadIframe = (iframe, placeholder) => {
+      if (!iframe) return;
+      iframe.addEventListener("load", () => {
+        iframe.classList.add("lazyloaded");
+        hidePlaceholder(placeholder);
+      }, { once: true });
+
+      const dataSrc = iframe.getAttribute("data-src");
+      if (dataSrc && iframe.getAttribute("src") !== dataSrc) {
+        iframe.setAttribute("src", dataSrc);
+      }
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      ratios.forEach(ratio => {
+        const iframe = ratio.querySelector("iframe");
+        const placeholder = ratio.querySelector(".placeholder");
+        loadIframe(iframe, placeholder);
+        hidePlaceholder(placeholder);
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const ratio = entry.target;
+        const iframe = ratio.querySelector("iframe");
+        const placeholder = ratio.querySelector(".placeholder");
+        loadIframe(iframe, placeholder);
+        observer.unobserve(ratio);
+      });
+    }, { rootMargin: "120px 0px" });
+
+    ratios.forEach(ratio => observer.observe(ratio));
+  }
+
   applyTheme(getPreferredTheme());
   applyLang(getLang());
   initControls();
   initToTop();
+  initLazyVideo();
 })();
