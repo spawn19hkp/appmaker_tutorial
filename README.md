@@ -43,4 +43,4 @@ exist.
 - Theme toggle (dark/light) is saved to localStorage.
 
 ## YouTube embed reliability
-- v2 fix: iframes now use direct `src` (not JS `data-src`) and include `referrerpolicy="strict-origin-when-cross-origin"` to avoid YouTube Error 153 in some environments.
+- v2 fix: iframes keep `data-src` and are promoted to `src` via `initLazyIframes` (IntersectionObserver + fallback), while still including `referrerpolicy="strict-origin-when-cross-origin"` to avoid YouTube Error 153 in some environments.
