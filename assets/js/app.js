@@ -284,36 +284,6 @@
   }
   window.__amSafeTrack = safeTrack;
 
-  function initLazyIframes(){
-    const frames = Array.from(document.querySelectorAll("iframe[data-src]"));
-    if (!frames.length) return;
-
-    const load = (iframe) => {
-      const src = iframe.getAttribute("data-src");
-      if (!src) return;
-      iframe.setAttribute("src", src);
-      iframe.removeAttribute("data-src");
-      const ph = iframe.closest(".video")?.querySelector(".placeholder");
-      if (ph) ph.remove();
-    };
-
-    if (!("IntersectionObserver" in window)) {
-      frames.forEach(load);
-      return;
-    }
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          load(e.target);
-          io.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: "200px 0px" });
-
-    frames.forEach(f => io.observe(f));
-  }
-
   function initToTop(){
     const btn = document.querySelector("[data-totop]");
     if (!btn) return;
@@ -346,6 +316,5 @@
   applyTheme(getPreferredTheme());
   applyLang(getLang());
   initControls();
-  initLazyIframes();
   initToTop();
 })();
