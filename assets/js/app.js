@@ -317,6 +317,16 @@
         safeTrack("join_appmaker_click", { location: a.getAttribute("data-cta-loc") || "unknown" });
       });
     });
+
+    document.querySelectorAll(".actions .btn:not([data-cta])").forEach(btn => {
+      btn.addEventListener("click", () => {
+        safeTrack("lesson_navigation", {
+          direction: (btn.textContent || "").trim(),
+          destination: btn.getAttribute("href") || "",
+          current_lesson: document.title || ""
+        });
+      });
+    });
   }
 
   function initLazyVideo(){
