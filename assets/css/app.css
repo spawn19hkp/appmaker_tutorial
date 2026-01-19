@@ -16,9 +16,9 @@
   --radius2: 26px;
   --pad: 16px;
   --max: 1040px;
-  --accent: #ff3d77; /* raspberry */
-  --accent2: #7c3aed; /* violet */
-  --focus: rgba(255,61,119,.55);
+  --accent: #7c3aed; /* violet */
+  --accent2: #84cc16; /* lime */
+  --focus: rgba(124,58,237,.55);
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Noto Sans Sinhala", "Noto Sans Tamil", "Apple Color Emoji", "Segoe UI Emoji";
 }
 
