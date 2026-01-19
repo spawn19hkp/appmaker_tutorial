@@ -15,6 +15,9 @@
       btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
       btn.title = theme === "dark" ? "Switch to light" : "Switch to dark";
     }
+    if (typeof window.gtag === "function") {
+      window.gtag("set", "user_properties", { preferred_theme: theme });
+    }
   }
 
   function toggleTheme(){
@@ -268,6 +271,9 @@
       const isOn = btn.getAttribute("data-lang") === lang;
       btn.setAttribute("aria-pressed", isOn ? "true" : "false");
     });
+    if (typeof window.gtag === "function") {
+      window.gtag("set", "user_properties", { preferred_language: lang });
+    }
   }
 
   function setLang(lang){
