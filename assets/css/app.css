@@ -16,9 +16,9 @@
   --radius2: 26px;
   --pad: 16px;
   --max: 1040px;
-  --accent: #7c3aed; /* violet */
-  --accent2: #84cc16; /* lime */
-  --focus: rgba(124,58,237,.55);
+  --accent: #0D9488;
+  --accent2: #FB923C;
+  --focus: rgba(13,148,136,.55);
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Noto Sans Sinhala", "Noto Sans Tamil", "Apple Color Emoji", "Segoe UI Emoji";
 }
 
@@ -42,9 +42,9 @@ body{
   font-family: var(--font);
   color: var(--text);
   background:
-    radial-gradient(1200px 650px at 10% 0%, rgba(124,58,237,.32), transparent 60%),
-    radial-gradient(900px 600px at 100% 0%, rgba(132,204,22,.22), transparent 55%),
-    radial-gradient(900px 900px at 70% 100%, rgba(132,204,22,.14), transparent 55%),
+    radial-gradient(1200px 650px at 10% 0%, rgba(13,148,136,.32), transparent 60%),
+    radial-gradient(900px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%),
+    radial-gradient(900px 900px at 70% 100%, rgba(251,146,60,.14), transparent 55%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
   line-height:1.55;
 }
@@ -170,7 +170,7 @@ html[data-theme="light"] header.topbar{
 .seg button[aria-pressed="true"]{
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: white;
-  box-shadow: 0 10px 24px rgba(124,58,237,.18);
+  box-shadow: 0 10px 24px rgba(13,148,136,.18);
 }
 .icon-btn{
   appearance:none;
@@ -192,8 +192,8 @@ main{padding: 20px 0 40px}
   border-radius: var(--radius2);
   border: 1px solid var(--line);
   background:
-    radial-gradient(900px 420px at 10% 0%, rgba(124,58,237,.22), transparent 60%),
-    radial-gradient(900px 420px at 90% 0%, rgba(132,204,22,.18), transparent 62%),
+    radial-gradient(900px 420px at 10% 0%, rgba(13,148,136,.22), transparent 60%),
+    radial-gradient(900px 420px at 90% 0%, rgba(251,146,60,.18), transparent 62%),
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
   box-shadow: var(--shadow);
   overflow:hidden;
@@ -275,8 +275,8 @@ h1{
   overflow:hidden;
   border:1px solid rgba(255,255,255,.12);
   background:
-    radial-gradient(400px 180px at 20% 0%, rgba(132,204,22,.18), transparent 65%),
-    radial-gradient(400px 180px at 80% 0%, rgba(124,58,237,.22), transparent 65%),
+    radial-gradient(400px 180px at 20% 0%, rgba(251,146,60,.18), transparent 65%),
+    radial-gradient(400px 180px at 80% 0%, rgba(13,148,136,.22), transparent 65%),
     rgba(0,0,0,.25);
 }
 .video .ratio{
@@ -364,10 +364,10 @@ h1{
 .btn:hover{background: rgba(255,255,255,.09)}
 .btn:active{transform: translateY(1px)}
 .btn.primary{
-  border-color: rgba(124,58,237,.45);
+  border-color: rgba(13,148,136,.45);
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: white;
-  box-shadow: 0 20px 50px rgba(124,58,237,.14);
+  box-shadow: 0 20px 50px rgba(13,148,136,.14);
 }
 .btn.primary:hover{filter: brightness(1.03)}
 .btn[aria-disabled="true"]{
