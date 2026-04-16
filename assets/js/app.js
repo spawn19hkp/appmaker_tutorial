@@ -420,9 +420,65 @@
     ratios.forEach(ratio => observer.observe(ratio));
   }
 
+  const PROGRESS_KEY = 'am_visited_lessons';
+
+  function markLessonVisited(lessonKey){
+    if (!lessonKey) return;
+
+    let visited = {};
+    try{
+      visited = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}") || {};
+    }catch(_e){
+      visited = {};
+    }
+
+    visited[lessonKey] = true;
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(visited));
+  }
+
+  function getSectionProgress(prefix, total){
+    let visited = {};
+    try{
+      visited = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}") || {};
+    }catch(_e){
+      visited = {};
+    }
+
+    const done = Object.keys(visited).filter(key => key.startsWith(prefix)).length;
+    return { done, total };
+  }
+
+  function renderHubProgress(){
+    const sections = [
+      { prefix: "basic-", total: 9 },
+      { prefix: "after-launch-", total: 3 },
+      { prefix: "advanced-", total: 6 },
+      { prefix: "versa-ai-", total: 4 },
+      { prefix: "other-", total: 6 }
+    ];
+
+    const cards = document.querySelectorAll(".section-card");
+    cards.forEach((card, idx) => {
+      const config = sections[idx];
+      if (!config) return;
+
+      const { done, total } = getSectionProgress(config.prefix, config.total);
+      const pct = total > 0 ? Math.min(100, (done / total) * 100) : 0;
+
+      const progBar = card.querySelector(".s-prog span");
+      if (progBar) progBar.style.width = `${pct}%`;
+
+      const label = card.querySelector(".s-prog-label");
+      if (label) label.textContent = `${done}/${total} completed`;
+    });
+  }
+
   applyTheme(getPreferredTheme());
   applyLang(getLang());
   initControls();
   initToTop();
   initLazyVideo();
+  const match = window.location.pathname.match(/(basic|after-launch|advanced|versa-ai|other)-(\d+)\.html$/);
+  if (match) markLessonVisited(`${match[1]}-${match[2]}`);
+  if (document.body.classList.contains("hub-page")) renderHubProgress();
 })();
