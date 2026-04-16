@@ -177,6 +177,13 @@
   </button>
 
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof markLessonVisited === 'function') {
+        markLessonVisited('versa-ai-3');
+      }
+    });
+  </script>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>
