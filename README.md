@@ -30,14 +30,14 @@ Upload everything inside `appmaker_tutorial_modern/` into your `Tutorial_Videos/
 exist.
 
 ## Tutorial structure
-- Lesson 1: Registration (index.html)
-- Lesson 2: Getting Started (step-2.html)
-- Lesson 3: Create Pages (step-3.html)
-- Lesson 4: Create Forms (step-4.html)
-- Lesson 5: Create a Website (step-5.html)
-- Lesson 6: Create an E-commerce Store (step-6.html)
-- Lesson 7: Create a Chat App (step-7.html)
-- Lesson 8: Publish Your App (step-8.html)
+The primary lesson content is organized under `Tutorial_Videos/` into five active sections:
+- Basic: 9 lessons (`basic-1.html` to `basic-9.html`)
+- After Launch: 3 lessons (`after-launch-1.html` to `after-launch-3.html`)
+- Advanced: 6 lessons (`advanced-1.html` to `advanced-6.html`)
+- Versa AI: 4 lessons (`versa-ai-1.html` to `versa-ai-4.html`)
+- Other Features: 6 lessons (`other-1.html` to `other-6.html`)
+
+Top-level `step-2.html` through `step-8.html` are legacy redirect pages, not the primary lesson content.
 
 ## Multi-language (English / Sinhala / Tamil)
 - Use the language switcher in the top bar.
