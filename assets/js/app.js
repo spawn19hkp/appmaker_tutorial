@@ -297,6 +297,48 @@
     return (i18n[lang] && i18n[lang][key]) || (i18n.en && i18n.en[key]) || "";
   }
 
+  function setMetaContent(selector, content){
+    if (!content) return;
+    const el = document.querySelector(selector);
+    if (el) el.setAttribute("content", content);
+  }
+
+  function syncUrlMetadata(){
+    const path = window.location.pathname || "/";
+    const lessonPathMatch = path.match(/\/(?:Tutorial_Videos\/)?((?:basic|after-launch|advanced|versa-ai|other)-\d+\.html)$/);
+    if (!lessonPathMatch) return;
+
+    const canonicalPath = `/Tutorial_Videos/${lessonPathMatch[1]}`;
+    const canonicalUrl = `https://appmaker.lk${canonicalPath}`;
+
+    const canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalEl) canonicalEl.setAttribute("href", canonicalUrl);
+    setMetaContent('meta[property="og:url"]', canonicalUrl);
+    setMetaContent('meta[name="twitter:url"]', canonicalUrl);
+  }
+
+  function syncLocalizedHeadMetadata(lang){
+    const titleKey = document.querySelector('meta[name="i18n-title-key"]')?.getAttribute("content");
+    if (titleKey) {
+      const newTitle = t(lang, titleKey);
+      if (newTitle) {
+        document.title = newTitle;
+        setMetaContent('meta[property="og:title"]', newTitle);
+        setMetaContent('meta[name="twitter:title"]', newTitle);
+      }
+
+      const descKey = titleKey.replace(/\.(?:docTitle|title)$/, ".desc");
+      if (descKey !== titleKey) {
+        const newDesc = t(lang, descKey);
+        if (newDesc) {
+          setMetaContent('meta[name="description"]', newDesc);
+          setMetaContent('meta[property="og:description"]', newDesc);
+          setMetaContent('meta[name="twitter:description"]', newDesc);
+        }
+      }
+    }
+  }
+
   function applyLang(lang){
     document.documentElement.lang = lang === "si" ? "si" : (lang === "ta" ? "ta" : "en");
     document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -305,11 +347,8 @@
       if (val) el.textContent = val;
     });
 
-    const titleKey = document.querySelector('meta[name="i18n-title-key"]')?.getAttribute("content");
-    if (titleKey) {
-      const newTitle = t(lang, titleKey);
-      if (newTitle) document.title = newTitle;
-    }
+    syncLocalizedHeadMetadata(lang);
+    syncUrlMetadata();
 
     document.querySelectorAll("[data-lang]").forEach(btn => {
       const isOn = btn.getAttribute("data-lang") === lang;
