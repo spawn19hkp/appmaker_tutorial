@@ -1,0 +1,15 @@
+# Section 1 Lesson Template Worksheet
+
+Use this table as the single source of truth for Section 1 (`basic-1.html` … `basic-9.html`) placeholder mapping.
+
+| FILE | LESSON_DESC_EN | I18N_TITLE_KEY | SECTION_TITLE_KEY | LESSON_TITLE_KEY | SECTION_BADGE_CLASS | KICKER_KEY | LESSON_DESC_KEY | LESSON_NUM | SECTION_TOTAL | PROGRESS_FRACTION | VIDEO_ID | PREV_URL | NEXT_URL | PREV_DISABLED | NEXT_DISABLED | NEXT_KEY | FOOTER_TITLE_KEY | FOOTER_TEXT_KEY | LESSON_KEY |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| basic-1.html | Part 1 of 9 in Basic Lessons. | basic1.title | section1.title | basic1.title | sec-1 | basic1.kicker | basic1.desc | 1 | 9 | 0.1111 | MvC8EQl6IcU | index.html | basic-2.html | true | false | ui.next | basic1.footerTitle | basic1.footerText | basic-1 |
+| basic-2.html | Part 2 of 9 in Basic Lessons. | basic2.title | section1.title | basic2.title | sec-1 | basic2.kicker | basic2.desc | 2 | 9 | 0.2222 | MvC8EQl6IcU | basic-1.html | basic-3.html | false | false | ui.next | basic2.footerTitle | basic2.footerText | basic-2 |
+| basic-3.html | Part 3 of 9 in Basic Lessons. | basic3.title | section1.title | basic3.title | sec-1 | basic3.kicker | basic3.desc | 3 | 9 | 0.3333 | MvC8EQl6IcU | basic-2.html | basic-4.html | false | false | ui.next | basic3.footerTitle | basic3.footerText | basic-3 |
+| basic-4.html | Part 4 of 9 in Basic Lessons. | basic4.title | section1.title | basic4.title | sec-1 | basic4.kicker | basic4.desc | 4 | 9 | 0.4444 | MvC8EQl6IcU | basic-3.html | basic-5.html | false | false | ui.next | basic4.footerTitle | basic4.footerText | basic-4 |
+| basic-5.html | Part 5 of 9 in Basic Lessons. | basic5.title | section1.title | basic5.title | sec-1 | basic5.kicker | basic5.desc | 5 | 9 | 0.5556 | MvC8EQl6IcU | basic-4.html | basic-6.html | false | false | ui.next | basic5.footerTitle | basic5.footerText | basic-5 |
+| basic-6.html | Part 6 of 9 in Basic Lessons. | basic6.title | section1.title | basic6.title | sec-1 | basic6.kicker | basic6.desc | 6 | 9 | 0.6667 | MvC8EQl6IcU | basic-5.html | basic-7.html | false | false | ui.next | basic6.footerTitle | basic6.footerText | basic-6 |
+| basic-7.html | Part 7 of 9 in Basic Lessons. | basic7.title | section1.title | basic7.title | sec-1 | basic7.kicker | basic7.desc | 7 | 9 | 0.7778 | MvC8EQl6IcU | basic-6.html | basic-8.html | false | false | ui.next | basic7.footerTitle | basic7.footerText | basic-7 |
+| basic-8.html | Part 8 of 9 in Basic Lessons. | basic8.title | section1.title | basic8.title | sec-1 | basic8.kicker | basic8.desc | 8 | 9 | 0.8889 | MvC8EQl6IcU | basic-7.html | basic-9.html | false | false | ui.next | basic8.footerTitle | basic8.footerText | basic-8 |
+| basic-9.html | Part 9 of 9 in Basic Lessons. | basic9.title | section1.title | basic9.title | sec-1 | basic9.kicker | basic9.desc | 9 | 9 | 1.0000 | MvC8EQl6IcU | basic-8.html | after-launch-1.html | false | false | ui.next | basic9.footerTitle | basic9.footerText | basic-9 |
