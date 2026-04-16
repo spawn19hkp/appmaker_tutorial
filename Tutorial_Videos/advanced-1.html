@@ -1,21 +1,32 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6Y99HCGTQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-H6Y99HCGTQ');
   </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Appmaker tutorial lesson page.">
+  <meta name="description" content="Part 1 of 6 in Advanced Page Creation Options.">
   <meta name="keywords" content="Appmaker tutorial, Appmaker lessons, no-code app builder">
+  <meta name="i18n-title-key" content="advanced1.title">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://appmaker.lk/Tutorial_Videos/advanced-1.html">
+  <meta property="og:title" content="Advanced Lesson 1 | Appmaker Tutorials">
+  <meta property="og:description" content="Part 1 of 6 in Advanced Page Creation Options.">
   <meta property="og:image" content="https://appmaker.lk/Tutorial_Videos/img/logo.svg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://appmaker.lk/Tutorial_Videos/advanced-1.html">
+  <meta name="twitter:title" content="Advanced Lesson 1 | Appmaker Tutorials">
+  <meta name="twitter:description" content="Part 1 of 6 in Advanced Page Creation Options.">
   <meta name="twitter:image" content="https://appmaker.lk/Tutorial_Videos/img/logo.svg">
+  <link rel="canonical" href="https://appmaker.lk/Tutorial_Videos/advanced-1.html">
+
   <link rel="icon" href="img/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,14 +43,14 @@
         <a class="brand" href="index.html" aria-label="Go to tutorials start">
           <span class="logo" aria-hidden="true"><img src="img/logo.svg" alt=""></span>
           <span class="meta">
-            <span class="title">Appmaker Tutorials</span>
-            <span class="subtitle">Fast, step-by-step video lessons</span>
+            <span class="title" data-i18n="app.name">Appmaker Tutorials</span>
+            <span class="subtitle" data-i18n="app.subtitle">Fast, step-by-step video lessons</span>
           </span>
         </a>
 
         <div class="controls">
           <div class="pill" aria-label="Language selector">
-            <span class="label">Language</span>
+            <span class="label" data-i18n="ui.language">Language</span>
             <div class="seg" role="group" aria-label="Choose language">
               <button type="button" data-lang="en" aria-pressed="true">EN</button>
               <button type="button" data-lang="si" aria-pressed="false">සි</button>
@@ -48,7 +59,7 @@
           </div>
 
           <button class="icon-btn" type="button" data-theme-toggle aria-pressed="true" aria-label="Toggle theme">
-            <small>Theme</small>
+            <small data-i18n="ui.theme">Theme</small>
           </button>
         </div>
       </div>
@@ -62,20 +73,20 @@
           <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="index.html">Tutorial Hub</a>
             <span aria-hidden="true">/</span>
-            <span>Advanced</span>
+            <span data-i18n="section3.title"></span>
             <span aria-hidden="true">/</span>
-            <span>Lesson 1 of 6</span>
+            <span data-i18n="advanced1.title"></span>
           </nav>
 
           <div class="title-row">
-            <span class="section-badge sec-3">Advanced</span>
-            <h1 id="lesson-title">Advanced Lesson 1</h1>
+            <span class="section-badge sec-3" data-i18n="section3.title"></span>
+            <h1 id="lesson-title" data-i18n="advanced1.title"></h1>
           </div>
-          <p class="lead">Continue your advanced path with lesson 1 in this section.</p>
+          <p class="lead" data-i18n="advanced1.desc"></p>
 
           <div class="badges" aria-label="Quick info">
             <div class="badge">
-              <strong>Progress</strong>
+              <strong data-i18n="ui.progress">Progress</strong>
               <span style="opacity:.85">•</span>
               <span>1/6</span>
             </div>
@@ -90,7 +101,7 @@
             <div class="video" aria-label="Tutorial video">
               <div class="ratio">
                 <div class="placeholder">
-                  <div style="font-weight:800">Video loads when you scroll</div>
+                  <div style="font-weight:800" data-i18n="ui.playHint">Video loads when you scroll</div>
                 </div>
 
                 <iframe
@@ -106,10 +117,14 @@
           </div>
 
           <div class="actions" aria-label="Lesson actions">
-            <a class="btn" href="#" aria-disabled="true"><span>Previous</span></a>
-            <a class="btn" href="advanced-2.html" aria-disabled="false"><span>Next</span></a>
+            <a class="btn" href="after-launch-3.html" aria-disabled="false">
+              <span data-i18n="ui.prev">Previous</span>
+            </a>
+            <a class="btn" href="advanced-2.html" aria-disabled="false">
+              <span data-i18n="ui.next">Next</span>
+            </a>
             <a class="btn primary" href="https://appmaker.lk/" target="_blank" rel="noopener" data-cta="join" data-cta-loc="hero">
-              <span>Join Appmaker</span>
+              <span data-i18n="ui.join">Join Appmaker</span>
             </a>
           </div>
         </div>
@@ -118,59 +133,59 @@
 
     <section class="grid" aria-label="More content">
       <div class="card lesson-list">
-        <h2>All lessons</h2>
+        <h2 data-i18n="ui.allLessons">All lessons</h2>
         <div class="lesson-items">
           <a class="lesson-item" href="advanced-1.html">
-  <div class="n">1</div>
-  <div>
-    <div class="t">Advanced Lesson 1</div>
-    <div class="d">Part 1 of 6 in Advanced.</div>
-  </div>
-</a>
+            <div class="n">1</div>
+            <div>
+              <div class="t" data-i18n="advanced1.title"></div>
+              <div class="d" data-i18n="advanced1.desc"></div>
+            </div>
+          </a>
           <a class="lesson-item" href="advanced-2.html">
-  <div class="n">2</div>
-  <div>
-    <div class="t">Advanced Lesson 2</div>
-    <div class="d">Part 2 of 6 in Advanced.</div>
-  </div>
-</a>
+            <div class="n">2</div>
+            <div>
+              <div class="t" data-i18n="advanced2.title"></div>
+              <div class="d" data-i18n="advanced2.desc"></div>
+            </div>
+          </a>
           <a class="lesson-item" href="advanced-3.html">
-  <div class="n">3</div>
-  <div>
-    <div class="t">Advanced Lesson 3</div>
-    <div class="d">Part 3 of 6 in Advanced.</div>
-  </div>
-</a>
+            <div class="n">3</div>
+            <div>
+              <div class="t" data-i18n="advanced3.title"></div>
+              <div class="d" data-i18n="advanced3.desc"></div>
+            </div>
+          </a>
           <a class="lesson-item" href="advanced-4.html">
-  <div class="n">4</div>
-  <div>
-    <div class="t">Advanced Lesson 4</div>
-    <div class="d">Part 4 of 6 in Advanced.</div>
-  </div>
-</a>
+            <div class="n">4</div>
+            <div>
+              <div class="t" data-i18n="advanced4.title"></div>
+              <div class="d" data-i18n="advanced4.desc"></div>
+            </div>
+          </a>
           <a class="lesson-item" href="advanced-5.html">
-  <div class="n">5</div>
-  <div>
-    <div class="t">Advanced Lesson 5</div>
-    <div class="d">Part 5 of 6 in Advanced.</div>
-  </div>
-</a>
+            <div class="n">5</div>
+            <div>
+              <div class="t" data-i18n="advanced5.title"></div>
+              <div class="d" data-i18n="advanced5.desc"></div>
+            </div>
+          </a>
           <a class="lesson-item" href="advanced-6.html">
-  <div class="n">6</div>
-  <div>
-    <div class="t">Advanced Lesson 6</div>
-    <div class="d">Part 6 of 6 in Advanced.</div>
-  </div>
-</a>
+            <div class="n">6</div>
+            <div>
+              <div class="t" data-i18n="advanced6.title"></div>
+              <div class="d" data-i18n="advanced6.desc"></div>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="card lesson-list">
-        <h2>Keep learning</h2>
-        <p class="lead" style="margin:0">Finish all 6 lessons in Advanced to complete this section.</p>
+        <h2 data-i18n="advanced1.footerTitle"></h2>
+        <p class="lead" style="margin:0" data-i18n="advanced1.footerText"></p>
         <div style="height:14px"></div>
         <a class="btn primary" href="https://appmaker.lk/" target="_blank" rel="noopener" data-cta="join" data-cta-loc="footer">
-          <span>Join Appmaker</span>
+          <span data-i18n="ui.join">Join Appmaker</span>
         </a>
         <div style="height:10px"></div>
         <p style="margin:0; font-size:12px; color:var(--muted2)">
@@ -187,7 +202,7 @@
   </main>
 
   <button class="btn totop" type="button" data-totop aria-label="Scroll to top">
-    <span>Scroll to top</span>
+    <span data-i18n="ui.scrollTop">Scroll to top</span>
   </button>
 
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
