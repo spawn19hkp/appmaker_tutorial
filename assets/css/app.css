@@ -504,3 +504,129 @@ footer a{color: var(--muted); text-decoration: underline; text-underline-offset:
 @media (prefers-reduced-motion: reduce){
   *{scroll-behavior:auto !important; transition:none !important; animation:none !important}
 }
+
+/* Work order: section overview cards */
+.section-grid{
+  margin-top: 18px;
+  display:grid;
+  gap: 12px;
+}
+
+.section-card{
+  display:grid;
+  gap: 12px;
+  text-decoration:none;
+  color:inherit;
+  border-radius: 20px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(700px 220px at 0% 0%, rgba(13,148,136,.16), transparent 62%),
+    radial-gradient(700px 220px at 100% 0%, rgba(251,146,60,.14), transparent 62%),
+    linear-gradient(160deg, color-mix(in oklab, var(--card2), #ffffff 5%), var(--card));
+  box-shadow: var(--shadow2);
+  padding: 14px;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.section-card:hover,
+.section-card:focus-visible{
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--accent) 58%, var(--line));
+  outline: none;
+}
+.section-card .s-num{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display:inline-grid;
+  place-items:center;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .3px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.08);
+}
+.section-card .s-title{
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.28;
+  letter-spacing: -.01em;
+}
+.section-card .s-desc{
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.section-card .s-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted2);
+}
+.section-card .s-prog{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid var(--line);
+  overflow:hidden;
+}
+.section-card .s-prog > span{
+  display:block;
+  height:100%;
+  width: calc(var(--progress, .1) * 100%);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 999px;
+}
+
+.breadcrumb{
+  display:inline-flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.breadcrumb a{
+  text-decoration:none;
+  color: var(--text);
+  font-weight: 700;
+}
+.breadcrumb a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.breadcrumb .sep{
+  color: var(--muted2);
+  opacity: .8;
+}
+
+.section-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+}
+.section-badge.sec-1{background: color-mix(in oklab, #14b8a6 28%, transparent);}
+.section-badge.sec-2{background: color-mix(in oklab, #f59e0b 28%, transparent);}
+.section-badge.sec-3{background: color-mix(in oklab, #6366f1 28%, transparent);}
+.section-badge.sec-4{background: color-mix(in oklab, #ec4899 28%, transparent);}
+.section-badge.sec-5{background: color-mix(in oklab, #22c55e 28%, transparent);}
+
+@media (min-width: 720px){
+  .section-grid{grid-template-columns: 1fr 1fr;}
+  .section-card{padding: 16px;}
+}
+
+@media (min-width: 1040px){
+  .section-grid{grid-template-columns: repeat(3, 1fr);}
+}
