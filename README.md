@@ -20,14 +20,18 @@ appmaker_tutorial_modern/
     favicon.ico
 
 ## Deploy
-If your pages live at:
-https://appmaker.lk/Tutorial_Videos/
+Deploy with `index.html` at your deployment root as the primary tutorial hub page.  
+That root hub contains the lesson cards and those cards should link to pages inside `Tutorial_Videos/*.html`.
 
-Upload everything inside `appmaker_tutorial_modern/` into your `Tutorial_Videos/` folder so paths like:
-- /Tutorial_Videos/assets/css/app.css
-- /Tutorial_Videos/assets/js/app.js
-- /Tutorial_Videos/img/logo.svg
-exist.
+Inside each `Tutorial_Videos/*.html` lesson page, keep relative references intact:
+- shared CSS/JS assets should use `../assets/...`
+- shared images should use `../img/...`
+
+Expected path examples (to validate your deploy):
+- Root hub page: `/index.html`
+- Nested lesson page: `/Tutorial_Videos/basic-1.html`
+- Shared asset references from a lesson page: `../assets/css/app.css`, `../assets/js/app.js`, `../img/logo.svg`  
+  (which resolve to `/assets/css/app.css`, `/assets/js/app.js`, and `/img/logo.svg`)
 
 ## Tutorial structure
 The primary lesson content is organized under `Tutorial_Videos/` into five active sections:
