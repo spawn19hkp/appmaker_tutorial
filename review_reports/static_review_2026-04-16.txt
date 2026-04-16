@@ -1,0 +1,14 @@
+1. [PASS] File naming prefixes/ranges
+   - All expected tutorial filenames are present and in-range.
+2. [PASS] Legacy step-2..step-8 references
+   - No legacy step-2..step-8 links found under Tutorial_Videos/*.html.
+3. [PASS] Hub cards + breadcrumb links
+   - All hub card and breadcrumb href targets resolve to existing files.
+4. [PASS] Prev/next boundary integrity
+   - Prev/next controls are valid including section boundaries.
+5. [PASS] i18n key coverage for referenced keys
+   - All data-i18n keys referenced in HTML are defined for en/si/ta.
+6. [FAIL] CSS selector parity for HTML classes
+   - Classes used in HTML but not found in assets/css/app.css: completion, hub-grid, hub-header, lesson-count, section-card-top, section-desc, section-number, section-title
+7. [FAIL] Progress UI resilience when localStorage unavailable
+   - localStorage is accessed directly without a surrounding availability guard; if browser storage is disabled, initialization can throw before finishing.
