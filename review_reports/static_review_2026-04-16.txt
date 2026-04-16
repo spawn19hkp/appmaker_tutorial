@@ -1,14 +1,38 @@
-1. [PASS] File naming prefixes/ranges
-   - All expected tutorial filenames are present and in-range.
-2. [PASS] Legacy step-2..step-8 references
-   - No legacy step-2..step-8 links found under Tutorial_Videos/*.html.
-3. [PASS] Hub cards + breadcrumb links
-   - All hub card and breadcrumb href targets resolve to existing files.
-4. [PASS] Prev/next boundary integrity
-   - Prev/next controls are valid including section boundaries.
-5. [PASS] i18n key coverage for referenced keys
-   - All data-i18n keys referenced in HTML are defined for en/si/ta.
-6. [FAIL] CSS selector parity for HTML classes
-   - Classes used in HTML but not found in assets/css/app.css: completion, hub-grid, hub-header, lesson-count, section-card-top, section-desc, section-number, section-title
-7. [FAIL] Progress UI resilience when localStorage unavailable
-   - localStorage is accessed directly without a surrounding availability guard; if browser storage is disabled, initialization can throw before finishing.
+Consistency review — index + lesson pages (2026-04-16)
+
+Scope checked
+- index.html (root hub page)
+- Tutorial_Videos/*.html lesson pages
+- assets/js/app.js
+
+1) data-i18n keys used in HTML vs new i18n object
+- PASS for runtime behavior: every HTML key resolves because app.js backfills missing si/ta keys from en via i18nParityKeys.
+- MISMATCH (explicit object completeness): si and ta objects do not explicitly define section hub keys used by index.html.
+  Missing explicit keys in si/ta:
+  section1.badge, section1.title, section1.desc,
+  section2.badge, section2.title, section2.desc,
+  section3.badge, section3.title, section3.desc,
+  section4.badge, section4.title, section4.desc,
+  section5.badge, section5.title, section5.desc.
+- Follow-up fix before signoff: add the above keys directly under si and ta in i18n to avoid hidden dependency on fallback mutation.
+
+2) markLessonVisited keys vs getSectionProgress hub prefix counting
+- PASS: markLessonVisited records keys in `<prefix>-<number>` format (via pathname regex).
+- PASS: getSectionProgress counts by startsWith(prefix), and renderHubProgress uses matching prefixes:
+  basic-, after-launch-, advanced-, versa-ai-, other-.
+
+3) Hub card totals vs actual lesson counts (expected 9/3/6/4/6)
+- PASS: Tutorial_Videos lesson files count as:
+  basic=9, after-launch=3, advanced=6, versa-ai=4, other=6.
+- PASS: hub totals configured in app.js renderHubProgress are 9/3/6/4/6.
+- PASS: root index.html hub cards data-total values are 9/3/6/4/6.
+
+4) Duplicate id attributes and malformed script tags
+- PASS: no duplicate id attributes within any individual HTML file reviewed.
+- PASS: no malformed script tags detected (open/close counts and structure are balanced).
+
+5) app.js syntax validity after object replacement + function insertion
+- PASS: `node --check assets/js/app.js` reports no syntax errors.
+
+Signoff status
+- NOT READY for implementation signoff due to mismatch in item (1) explicit i18n key completeness for si/ta.
