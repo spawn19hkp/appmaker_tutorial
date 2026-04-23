@@ -223,6 +223,20 @@
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      function applyVideoDescriptionLanguage(lang) {
+        const selectedLang = lang === 'si' || lang === 'ta' ? lang : 'en';
+        document.querySelectorAll('[data-video-desc]').forEach(function (block) {
+          block.style.display = block.getAttribute('data-video-desc') === selectedLang ? '' : 'none';
+        });
+      }
+
+      applyVideoDescriptionLanguage(localStorage.getItem('am_tutorial_lang') || 'en');
+      document.querySelectorAll('[data-lang]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          applyVideoDescriptionLanguage(btn.getAttribute('data-lang'));
+        });
+      });
+
       if (typeof markLessonVisited === 'function') {
         markLessonVisited('other-8');
       }
