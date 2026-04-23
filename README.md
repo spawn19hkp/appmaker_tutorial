@@ -36,12 +36,41 @@ Expected path examples (to validate your deploy):
 ## Tutorial structure
 The primary lesson content is organized under `Tutorial_Videos/` into five active sections:
 - Basic: 9 lessons (`basic-1.html` to `basic-9.html`)
-- After Launch: 3 lessons (`after-launch-1.html` to `after-launch-3.html`)
+- After Launch: 4 lessons (`after-launch-1.html` to `after-launch-4.html`)
 - Advanced: 6 lessons (`advanced-1.html` to `advanced-6.html`)
 - Versa AI: 4 lessons (`versa-ai-1.html` to `versa-ai-4.html`)
-- Other Features: 6 lessons (`other-1.html` to `other-6.html`)
+- Other Features: 7 lessons (`other-1.html` to `other-7.html`)
 
 Top-level `step-2.html` through `step-8.html` are legacy redirect pages, not the primary lesson content.
+
+## Tutorial mapping updates (April 2026)
+
+### Replaced YouTube embeds (Other Features 2–6)
+The following lesson pages now use these YouTube video IDs/URLs:
+
+- `other-2.html` → `https://www.youtube.com/embed/3Cfxd7PA7Jg?enablejsapi=1`
+- `other-3.html` → `https://www.youtube.com/embed/U3A8nEtWLOA?enablejsapi=1`
+- `other-4.html` → `https://www.youtube.com/embed/mlqRaI1au2c?enablejsapi=1`
+- `other-5.html` → `https://www.youtube.com/embed/e_nPPj_6C9I?enablejsapi=1`
+- `other-6.html` → `https://www.youtube.com/embed/CAQzusL8_rI?enablejsapi=1`
+
+### New lesson: After Launch 4 (`after-launch-4`)
+- **Topic:** How to upload your app to the google playstore
+- **Video:** `https://www.youtube.com/embed/KzWFNvFCVb8?enablejsapi=1`
+- **Articles:**
+  - `https://simato-appmaker.medium.com/how-to-navigate-the-new-google-developer-console-layout-3977b047beb9`
+  - `https://simato-appmaker.medium.com/changes-to-google-playstore-publishing-flow-38352b560fbd`
+
+### New lesson: Other Features 7 (`other-7`)
+- **Topic:** The Appmaker Store
+- **Video:** `https://www.youtube.com/embed/h7LfXv0tEfg?enablejsapi=1`
+- **Articles:** none currently linked on the lesson page
+
+## Migration notes
+- Legacy top-level tutorial pages `step-2.html` through `step-8.html` are redirect pages and should continue to 0-second refresh to `index.html`.
+- Any old bookmarks or shared links to `step-2.html` ... `step-8.html` now resolve to the main hub, then users continue from `Tutorial_Videos/*.html` lesson pages.
+- If maintainers add/remove lessons, update both section totals in this README and hub/lesson navigation counts to keep redirects and progression labels consistent.
+
 
 ## Multi-language (English / Sinhala / Tamil)
 - Use the language switcher in the top bar.
