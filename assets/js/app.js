@@ -678,7 +678,7 @@
       "other8.docTitle": "Card Payments Enable | Appmaker",
   }
   };
-  const i18nParityKeys = Object.keys(i18n.en).filter(key => key.startsWith("hub.") || /^section\d+\./.test(key) || key.startsWith("basic") || key.startsWith("afterLaunch") || key.startsWith("advanced") || key.startsWith("versaAi") || key.startsWith("other"));
+  const i18nParityKeys = Object.keys(i18n.en).filter(key => key.startsWith("sectionHub.") || /^section\d+\./.test(key) || key.startsWith("basic") || key.startsWith("afterlaunch") || key.startsWith("advanced") || key.startsWith("versaai") || key.startsWith("other"));
   Object.keys(i18n).forEach(lang => {
     if (lang === "en") return;
     i18nParityKeys.forEach(key => {
