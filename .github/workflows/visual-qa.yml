@@ -1,0 +1,28 @@
+name: Visual QA
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  visual-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: Start static server
+        run: |
+          python -m http.server 4173 &
+          sleep 2
+      - name: Run visual smoke checks
+        run: node tests/visual/check-pages.mjs
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-artifacts
+          path: tests/visual/artifacts/

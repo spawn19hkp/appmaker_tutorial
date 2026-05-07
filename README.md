@@ -39,7 +39,7 @@ The primary lesson content is organized under `Tutorial_Videos/` into five activ
 - After Launch: 4 lessons (`after-launch-1.html` to `after-launch-4.html`)
 - Advanced: 6 lessons (`advanced-1.html` to `advanced-6.html`)
 - Versa AI: 4 lessons (`versa-ai-1.html` to `versa-ai-4.html`)
-- Other Features: 7 lessons (`other-1.html` to `other-7.html`)
+- Other Features: 8 lessons (`other-1.html` to `other-8.html`)
 
 Top-level `step-2.html` through `step-8.html` are legacy redirect pages, not the primary lesson content.
 
@@ -65,6 +65,12 @@ The following lesson pages now use these YouTube video IDs/URLs:
 - **Topic:** The Appmaker Store
 - **Video:** `https://www.youtube.com/embed/h7LfXv0tEfg?enablejsapi=1`
 - **Articles:** none currently linked on the lesson page
+
+
+### New lesson: Other Features 8 (`other-8`)
+- **Topic:** How to Enable Card Payments on Your App!
+- **Video:** `https://www.youtube.com/embed/YXCEloHonO0?enablejsapi=1`
+- **Link:** `https://forms.gle/NDnoVWWFhDGfyae67`
 
 ## Migration notes
 - Legacy top-level tutorial pages `step-2.html` through `step-8.html` are redirect pages and should continue to 0-second refresh to `index.html`.
@@ -104,3 +110,23 @@ The following lesson pages now use these YouTube video IDs/URLs:
 
 ## YouTube embed reliability
 - v2 fix: iframes keep `data-src` and are promoted to `src` via `initLazyVideo` (IntersectionObserver + fallback), while still including `referrerpolicy="strict-origin-when-cross-origin"` to avoid YouTube Error 153 in some environments.
+
+
+## Visual QA checks (AI-friendly)
+A Playwright visual smoke check is included to catch blank/missing lesson text like the issues in `other-7`, `other-8`, and `after-launch-4`.
+
+### What it checks
+- Hero title exists
+- Footer title + footer description exist on the right card
+- For Other Features pages, lesson list items 7 and 8 have non-empty title/description
+- Saves full-page screenshots to `tests/visual/artifacts/`
+
+### Run locally
+1. Start a static server from repo root:
+   - `python -m http.server 4173`
+2. In another terminal run:
+   - `npx playwright install chromium`
+   - `node tests/visual/check-pages.mjs`
+
+Optional base URL override:
+- `VISUAL_BASE_URL=http://127.0.0.1:4173 node tests/visual/check-pages.mjs`
