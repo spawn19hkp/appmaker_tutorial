@@ -507,7 +507,7 @@ footer a{color: var(--muted); text-decoration: underline; text-underline-offset:
 
 /* Work order: section overview cards */
 .section-grid{
-  margin-top: 18px;
+  margin-top: 20px;
   display:grid;
   gap: 12px;
 }
@@ -623,10 +623,16 @@ footer a{color: var(--muted); text-decoration: underline; text-underline-offset:
 .section-badge.sec-5{background: color-mix(in oklab, #22c55e 28%, transparent);}
 
 @media (min-width: 720px){
-  .section-grid{grid-template-columns: 1fr 1fr;}
+  .section-grid{
+    margin-top: 24px;
+    grid-template-columns: 1fr 1fr;
+  }
   .section-card{padding: 16px;}
 }
 
 @media (min-width: 1040px){
-  .section-grid{grid-template-columns: repeat(3, 1fr);}
+  .section-grid{
+    margin-top: 28px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
