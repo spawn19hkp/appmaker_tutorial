@@ -46,6 +46,9 @@ body{
     radial-gradient(900px 600px at 100% 0%, rgba(251,146,60,.22), transparent 55%),
     radial-gradient(900px 900px at 70% 100%, rgba(251,146,60,.14), transparent 55%),
     linear-gradient(180deg, var(--bg0), var(--bg1));
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1200px 650px, 900px 600px, 900px 900px, 100% 100%;
+  background-position: 10% 0%, 100% 0%, 70% 100%, 0 0;
   line-height:1.55;
 }
 
@@ -195,6 +198,9 @@ main{padding: 20px 0 40px}
     radial-gradient(900px 420px at 10% 0%, rgba(13,148,136,.22), transparent 60%),
     radial-gradient(900px 420px at 90% 0%, rgba(251,146,60,.18), transparent 62%),
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 900px 420px, 900px 420px, 100% 100%;
+  background-position: 10% 0%, 90% 0%, 0 0;
   box-shadow: var(--shadow);
   overflow:hidden;
 }
