@@ -107,6 +107,7 @@ The following lesson pages now use these YouTube video IDs/URLs:
 ## Notes
 - Videos are lazy-loaded (iframe `data-src`) for better performance on mobile.
 - Theme toggle (dark/light) is saved to localStorage.
+- Hub/background rendering standard: the dark gradient must remain continuous for the full page height (no white area after first card row), including while scrolling on mobile/tablet/desktop.
 
 ## YouTube embed reliability
 - v2 fix: iframes keep `data-src` and are promoted to `src` via `initLazyVideo` (IntersectionObserver + fallback), while still including `referrerpolicy="strict-origin-when-cross-origin"` to avoid YouTube Error 153 in some environments.
