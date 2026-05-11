@@ -674,6 +674,8 @@ The current style is:
 - Dark theme by default with light theme support.
 - Gradient background accents using teal and orange.
 - Hub background layers must render as a continuous surface (no visible tiling/repeating seams).
+- Global page background must be applied on `body`/root surface, not only hero/section wrappers; avoid white gaps below card rows on long pages.
+- Do not use fixed page-height wrappers for hub backgrounds (`height: 100vh`); use `min-height` so background continues while scrolling.
 - Rounded cards and buttons.
 - Soft shadows.
 - Sticky translucent topbar.
@@ -937,3 +939,4 @@ Use this checklist when creating a new lesson page.
 - Initial page format and styling guide created for the Appmaker tutorial static site.
 - Documented hub page structure, lesson page structure, i18n key rules, SEO rules, analytics rules, accessibility checklist, styling standards, progress formulas, and current lesson inventory.
 - Added hub visual QA/style expectations for `index.html`: keep spacing between hero and section cards, and prevent repeating background artifacts.
+- Clarified full-page background coverage rules: root-level background ownership, no white gaps on scroll, and prefer `min-height` over fixed `100vh` wrappers.
