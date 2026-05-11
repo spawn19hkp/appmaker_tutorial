@@ -673,6 +673,7 @@ The current style is:
 - Modern mobile-first interface.
 - Dark theme by default with light theme support.
 - Gradient background accents using teal and orange.
+- Hub background layers must render as a continuous surface (no visible tiling/repeating seams).
 - Rounded cards and buttons.
 - Soft shadows.
 - Sticky translucent topbar.
@@ -686,6 +687,7 @@ The current style is:
 - Keep `.actions` responsive grid behavior.
 - Keep `.grid` one column on mobile and two columns on larger screens.
 - Keep `.section-grid` responsive card layout.
+- On `index.html`, keep a visible vertical gap between the hub hero container and the first row of `.section-card` items; do not allow cards to visually touch the hero block.
 
 ### Inline style policy
 
@@ -934,3 +936,4 @@ Use this checklist when creating a new lesson page.
 
 - Initial page format and styling guide created for the Appmaker tutorial static site.
 - Documented hub page structure, lesson page structure, i18n key rules, SEO rules, analytics rules, accessibility checklist, styling standards, progress formulas, and current lesson inventory.
+- Added hub visual QA/style expectations for `index.html`: keep spacing between hero and section cards, and prevent repeating background artifacts.
