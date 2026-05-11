@@ -31,7 +31,7 @@ Create and maintain modern tutorial pages for Appmaker users.
   Tutorial_Videos/
     basic-1.html ... basic-9.html
     after-launch-1.html ... after-launch-4.html
-    advanced-1.html ... advanced-6.html
+    advanced-1.html ... advanced-7.html
     versa-ai-1.html ... versa-ai-4.html
     other-1.html ... other-8.html
   tests/
@@ -48,7 +48,7 @@ Create and maintain modern tutorial pages for Appmaker users.
 |---|---|---:|---:|
 | Basic Lessons – Create Your First App | `basic` | `Tutorial_Videos/basic-1.html` to `basic-9.html` | 9 |
 | Things to Do After Launch | `after-launch` | `Tutorial_Videos/after-launch-1.html` to `after-launch-4.html` | 4 |
-| Advanced Page Creation Options | `advanced` | `Tutorial_Videos/advanced-1.html` to `advanced-6.html` | 6 |
+| Advanced Page Creation Options | `advanced` | `Tutorial_Videos/advanced-1.html` to `advanced-7.html` | 7 |
 | App Creation Using Versa AI | `versa-ai` | `Tutorial_Videos/versa-ai-1.html` to `versa-ai-4.html` | 4 |
 | Other Features | `other` | `Tutorial_Videos/other-1.html` to `other-8.html` | 8 |
 

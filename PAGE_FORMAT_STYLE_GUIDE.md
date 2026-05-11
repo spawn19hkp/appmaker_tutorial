@@ -62,7 +62,7 @@ When updating this file, also update the **Change log** at the bottom.
 |---|---|---|---|---:|
 | Basic Lessons – Create Your First App | `basic` | `sec-1` | `section1.*` | 9 |
 | Things to Do After Launch | `after-launch` | `sec-2` | `section2.*` | 4 |
-| Advanced Page Creation Options | `advanced` | `sec-3` | `section3.*` | 6 |
+| Advanced Page Creation Options | `advanced` | `sec-3` | `section3.*` | 7 |
 | App Creation Using Versa AI | `versa-ai` | `sec-4` | `section4.*` | 4 |
 | Other Features | `other` | `sec-5` | `section5.*` | 8 |
 
@@ -103,6 +103,7 @@ When updating this file, also update the **Change log** at the bottom.
 | 4 | `Tutorial_Videos/advanced-4.html` | `advanced4` | How to Add & Manage Custom Forms on Your Pages |
 | 5 | `Tutorial_Videos/advanced-5.html` | `advanced5` | How to Auto-Update Your Page with RSS Feeds |
 | 6 | `Tutorial_Videos/advanced-6.html` | `advanced6` | How to Add a Voting (Poll) Feature to Your App |
+| 7 | `Tutorial_Videos/advanced-7.html` | `advanced7` | How to Create Custom Quizzes & MCQs in Your Education App! |
 
 ### App Creation Using Versa AI
 
@@ -621,7 +622,8 @@ When editing or adding lessons, verify all affected navigation.
 |---|---|---|---|
 | Basic | `basic-9.html` | `basic-8.html` | `../index.html` |
 | After Launch | `after-launch-4.html` | `after-launch-3.html` | `../index.html` |
-| Advanced | `advanced-6.html` | `advanced-5.html` | `../index.html` |
+| Advanced | `advanced-6.html` | `advanced-5.html` | `advanced-7.html` |
+| Advanced | `advanced-7.html` | `advanced-6.html` | `../index.html` |
 | Versa AI | `versa-ai-4.html` | `versa-ai-3.html` | `../index.html` |
 | Other Features | `other-8.html` | `other-7.html` | `../index.html` |
 

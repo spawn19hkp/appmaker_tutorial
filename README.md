@@ -37,7 +37,7 @@ Expected path examples (to validate your deploy):
 The primary lesson content is organized under `Tutorial_Videos/` into five active sections:
 - Basic: 9 lessons (`basic-1.html` to `basic-9.html`)
 - After Launch: 4 lessons (`after-launch-1.html` to `after-launch-4.html`)
-- Advanced: 6 lessons (`advanced-1.html` to `advanced-6.html`)
+- Advanced: 7 lessons (`advanced-1.html` to `advanced-7.html`)
 - Versa AI: 4 lessons (`versa-ai-1.html` to `versa-ai-4.html`)
 - Other Features: 8 lessons (`other-1.html` to `other-8.html`)
 
