@@ -1176,7 +1176,7 @@
       "ecommerce9.docTitle": "E-commerce டெம்ப்ளேட் பாடம் 9 | Appmaker",
   }
   };
-  const i18nParityKeys = Object.keys(i18n.en).filter(key => key.startsWith("sectionHub.") || /^section\d+\./.test(key) || key.startsWith("basic") || key.startsWith("afterlaunch") || key.startsWith("advanced") || key.startsWith("versaai") || key.startsWith("other"));
+  const i18nParityKeys = Object.keys(i18n.en).filter(key => key.startsWith("sectionHub.") || /^section\d+\./.test(key) || key.startsWith("basic") || key.startsWith("afterlaunch") || key.startsWith("advanced") || key.startsWith("versaai") || key.startsWith("other") || key.startsWith("specialised") || key.startsWith("ecommerce") || key.startsWith("webedge"));
   Object.keys(i18n).forEach(lang => {
     if (lang === "en") return;
     i18nParityKeys.forEach(key => {
