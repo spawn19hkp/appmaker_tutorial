@@ -178,3 +178,42 @@ A Playwright visual smoke check is included to catch blank/missing lesson text l
 
 Optional base URL override:
 - `VISUAL_BASE_URL=http://127.0.0.1:4173 node tests/visual/check-pages.mjs`
+
+## QA / Validation checklist
+
+Use this quick validation flow after any content, metadata, or lesson-order update.
+
+### 1) Exact YouTube URL matching
+- Validate each edited lesson page keeps the intended `data-src` as the **exact embed URL** (including `?enablejsapi=1`).
+- Do not rewrite or normalize YouTube links (for example, into short links or ID-only values) unless the current renderer explicitly requires ID extraction.
+- Confirm lazy-load attributes are preserved: `data-src`, `class="lazyload"`, and `loading="lazy"`.
+
+### 2) Section and video count validation
+- Confirm README section totals match `index.html` section cards and actual files in `Tutorial_Videos/`.
+- Confirm lesson numbering is continuous per section (no missing or duplicate lesson numbers).
+- Confirm each lesson page in a section is represented in that section's lesson list UI.
+
+### 3) Language switch checks (EN / SI / TA)
+- Open the hub and at least one lesson from each edited section.
+- Switch language to English, Sinhala, and Tamil.
+- Confirm hero title, description, lesson list text, and footer CTA text render in all three languages.
+
+### 4) Mobile and desktop layout checks
+- Validate at a mobile width (e.g., 390px) and a desktop width (e.g., 1366px).
+- Confirm no overlapping controls, clipped text, or broken card grids.
+- Confirm previous/next buttons, Join Appmaker CTA, and scroll-to-top button remain visible and usable.
+
+### 5) Browser console error check
+- Load hub + edited lesson pages and verify browser console has no JavaScript errors.
+- Pay special attention to i18n missing-key errors, failed iframe loading, and broken relative asset paths.
+
+### Quick validation for new sections
+Use this concise list specifically for the newer sections (**Specialised Templates**, **E-commerce Template**, **Web Edge**):
+
+- Verify section card links from `index.html` open the first lesson of each section.
+- Verify declared totals remain correct: `3` (Specialised Templates), `9` (E-commerce Template), `13` (Web Edge).
+- Verify first, middle, and last lesson pages in each of the three sections:
+  - correct YouTube `data-src`,
+  - correct previous/next navigation,
+  - correct progress label and bar value,
+  - populated EN/SI/TA text blocks.
