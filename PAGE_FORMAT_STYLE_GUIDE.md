@@ -65,6 +65,9 @@ When updating this file, also update the **Change log** at the bottom.
 | Advanced Page Creation Options | `advanced` | `sec-3` | `section3.*` | 7 |
 | App Creation Using Versa AI | `versa-ai` | `sec-4` | `section4.*` | 4 |
 | Other Features | `other` | `sec-5` | `section5.*` | 8 |
+| Specialised Templates | `specialised-templates` | `sec-6` | `section6.*` | 3 |
+| E-commerce Template | `ecommerce-template` | `sec-7` | `section7.*` | 9 |
+| Web Edge | `web-edge` | `sec-8` | `section8.*` | 13 |
 
 ---
 
@@ -126,6 +129,46 @@ When updating this file, also update the **Change log** at the bottom.
 | 6 | `Tutorial_Videos/other-6.html` | `other6` | Master Your Appmaker Dashboard — Profile, AI Credits & More |
 | 7 | `Tutorial_Videos/other-7.html` | `other7` | The Appmaker Store |
 | 8 | `Tutorial_Videos/other-8.html` | `other8` | How to Enable Card Payments on Your App! |
+
+### Specialised Templates
+
+| No. | File | i18n prefix | Current topic |
+|---:|---|---|---|
+| 1 | `Tutorial_Videos/specialised-templates-1.html` | `specialisedtemplates1` | Specialised Templates Lesson 1 |
+| 2 | `Tutorial_Videos/specialised-templates-2.html` | `specialisedtemplates2` | Specialised Templates Lesson 2 |
+| 3 | `Tutorial_Videos/specialised-templates-3.html` | `specialisedtemplates3` | Specialised Templates Lesson 3 |
+
+### E-commerce Template
+
+| No. | File | i18n prefix | Current topic |
+|---:|---|---|---|
+| 1 | `Tutorial_Videos/ecommerce-template-1.html` | `ecommercetemplate1` | E-commerce Template Lesson 1 |
+| 2 | `Tutorial_Videos/ecommerce-template-2.html` | `ecommercetemplate2` | E-commerce Template Lesson 2 |
+| 3 | `Tutorial_Videos/ecommerce-template-3.html` | `ecommercetemplate3` | E-commerce Template Lesson 3 |
+| 4 | `Tutorial_Videos/ecommerce-template-4.html` | `ecommercetemplate4` | E-commerce Template Lesson 4 |
+| 5 | `Tutorial_Videos/ecommerce-template-5.html` | `ecommercetemplate5` | E-commerce Template Lesson 5 |
+| 6 | `Tutorial_Videos/ecommerce-template-6.html` | `ecommercetemplate6` | E-commerce Template Lesson 6 |
+| 7 | `Tutorial_Videos/ecommerce-template-7.html` | `ecommercetemplate7` | E-commerce Template Lesson 7 |
+| 8 | `Tutorial_Videos/ecommerce-template-8.html` | `ecommercetemplate8` | E-commerce Template Lesson 8 |
+| 9 | `Tutorial_Videos/ecommerce-template-9.html` | `ecommercetemplate9` | E-commerce Template Lesson 9 |
+
+### Web Edge
+
+| No. | File | i18n prefix | Current topic |
+|---:|---|---|---|
+| 1 | `Tutorial_Videos/web-edge-1.html` | `webedge1` | Web Edge Lesson 1 |
+| 2 | `Tutorial_Videos/web-edge-2.html` | `webedge2` | Web Edge Lesson 2 |
+| 3 | `Tutorial_Videos/web-edge-3.html` | `webedge3` | Web Edge Lesson 3 |
+| 4 | `Tutorial_Videos/web-edge-4.html` | `webedge4` | Web Edge Lesson 4 |
+| 5 | `Tutorial_Videos/web-edge-5.html` | `webedge5` | Web Edge Lesson 5 |
+| 6 | `Tutorial_Videos/web-edge-6.html` | `webedge6` | Web Edge Lesson 6 |
+| 7 | `Tutorial_Videos/web-edge-7.html` | `webedge7` | Web Edge Lesson 7 |
+| 8 | `Tutorial_Videos/web-edge-8.html` | `webedge8` | Web Edge Lesson 8 |
+| 9 | `Tutorial_Videos/web-edge-9.html` | `webedge9` | Web Edge Lesson 9 |
+| 10 | `Tutorial_Videos/web-edge-10.html` | `webedge10` | Web Edge Lesson 10 |
+| 11 | `Tutorial_Videos/web-edge-11.html` | `webedge11` | Web Edge Lesson 11 |
+| 12 | `Tutorial_Videos/web-edge-12.html` | `webedge12` | Web Edge Lesson 12 |
+| 13 | `Tutorial_Videos/web-edge-13.html` | `webedge13` | Web Edge Lesson 13 |
 
 ---
 
@@ -935,6 +978,14 @@ Use this checklist when creating a new lesson page.
 ---
 
 ## Change log
+
+### 2026-05-12
+
+- Expanded active tutorial inventory documentation to include:
+  - Specialised Templates (`specialised-templates`, 3 lessons)
+  - E-commerce Template (`ecommerce-template`, 9 lessons)
+  - Web Edge (`web-edge`, 13 lessons)
+- Added full lesson maps for all three new sections in the inventory tables.
 
 ### 2026-05-11
 

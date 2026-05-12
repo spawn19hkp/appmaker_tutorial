@@ -34,12 +34,15 @@ Expected path examples (to validate your deploy):
   (which resolve to `/assets/css/app.css`, `/assets/js/app.js`, and `/img/logo.svg`)
 
 ## Tutorial structure
-The primary lesson content is organized under `Tutorial_Videos/` into five active sections:
+The primary lesson content is organized under `Tutorial_Videos/` into eight active sections:
 - Basic: 9 lessons (`basic-1.html` to `basic-9.html`)
 - After Launch: 4 lessons (`after-launch-1.html` to `after-launch-4.html`)
 - Advanced: 7 lessons (`advanced-1.html` to `advanced-7.html`)
 - Versa AI: 4 lessons (`versa-ai-1.html` to `versa-ai-4.html`)
 - Other Features: 8 lessons (`other-1.html` to `other-8.html`)
+- Specialised Templates: 3 lessons (`specialised-templates-1.html` to `specialised-templates-3.html`)
+- E-commerce Template: 9 lessons (`ecommerce-template-1.html` to `ecommerce-template-9.html`)
+- Web Edge: 13 lessons (`web-edge-1.html` to `web-edge-13.html`)
 
 Top-level `step-2.html` through `step-8.html` are legacy redirect pages, not the primary lesson content.
 
