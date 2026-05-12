@@ -34,7 +34,7 @@ Expected path examples (to validate your deploy):
   (which resolve to `/assets/css/app.css`, `/assets/js/app.js`, and `/img/logo.svg`)
 
 ## Tutorial structure
-The primary lesson content is organized under `Tutorial_Videos/` into eight active sections:
+The primary lesson content is organized under `Tutorial_Videos/` into eight active sections (**57 total lessons**):
 - Basic: 9 lessons (`basic-1.html` to `basic-9.html`)
 - After Launch: 4 lessons (`after-launch-1.html` to `after-launch-4.html`)
 - Advanced: 7 lessons (`advanced-1.html` to `advanced-7.html`)
@@ -74,6 +74,50 @@ The following lesson pages now use these YouTube video IDs/URLs:
 - **Topic:** How to Enable Card Payments on Your App!
 - **Video:** `https://www.youtube.com/embed/YXCEloHonO0?enablejsapi=1`
 - **Link:** `https://forms.gle/NDnoVWWFhDGfyae67`
+
+### New sections added (Specialised Templates, E-commerce Template, Web Edge)
+These sections are now active and included in the tutorial hub structure.
+
+#### Section summary: lesson count + purpose
+- **Specialised Templates (3 lessons):** Covers specialized template setup flows for focused app scenarios.
+- **E-commerce Template (9 lessons):** Covers store-ready setup, catalog flow, and e-commerce template implementation.
+- **Web Edge (13 lessons):** Covers Web Edge page setup and configuration patterns across the full lesson path.
+
+#### New section video mapping (EN titles + YouTube URLs)
+
+**Specialised Templates**
+- Specialised Template Lesson 1 — `https://www.youtube.com/embed/8eUfN802Zwo?enablejsapi=1`
+- Specialised Template Lesson 2 — `https://www.youtube.com/embed/yCK-89ZMrfM?enablejsapi=1`
+- Specialised Template Lesson 3 — `https://www.youtube.com/embed/1Hy0hjBIRWI?enablejsapi=1`
+
+**E-commerce Template**
+- E-commerce Template Lesson 1 — `https://www.youtube.com/embed/J4x81AbkQb4?enablejsapi=1`
+- E-commerce Template Lesson 2 — `https://www.youtube.com/embed/gJztEWetJ_c?enablejsapi=1`
+- E-commerce Template Lesson 3 — `https://www.youtube.com/embed/OQ1NSZypLxE?enablejsapi=1`
+- E-commerce Template Lesson 4 — `https://www.youtube.com/embed/CsD_XpVwv8E?enablejsapi=1`
+- E-commerce Template Lesson 5 — `https://www.youtube.com/embed/ajQDt7Bvo0Y?enablejsapi=1`
+- E-commerce Template Lesson 6 — `https://www.youtube.com/embed/zoVJgMvUlxc?enablejsapi=1`
+- E-commerce Template Lesson 7 — `https://www.youtube.com/embed/_ZSfeQpk9ds?enablejsapi=1`
+- E-commerce Template Lesson 8 — `https://www.youtube.com/embed/YhOQ7EbwJ-E?enablejsapi=1`
+- E-commerce Template Lesson 9 — `https://www.youtube.com/embed/UPmyhW9ETT8?enablejsapi=1`
+
+**Web Edge**
+- Web Edge Lesson 1 — `https://www.youtube.com/embed/DyrnN-S7aJ8?enablejsapi=1`
+- Web Edge Lesson 2 — `https://www.youtube.com/embed/kCQxE-MFgbo?enablejsapi=1`
+- Web Edge Lesson 3 — `https://www.youtube.com/embed/drriPdIrkuI?enablejsapi=1`
+- Web Edge Lesson 4 — `https://www.youtube.com/embed/b0rEnO_I6ng?enablejsapi=1`
+- Web Edge Lesson 5 — `https://www.youtube.com/embed/Kb1kZjqIoDw?enablejsapi=1`
+- Web Edge Lesson 6 — `https://www.youtube.com/embed/3W7316qbuoU?enablejsapi=1`
+- Web Edge Lesson 7 — `https://www.youtube.com/embed/_i3raE14XuQ?enablejsapi=1`
+- Web Edge Lesson 8 — `https://www.youtube.com/embed/ZsFL52DXNsM?enablejsapi=1`
+- Web Edge Lesson 9 — `https://www.youtube.com/embed/KPRrA6BQaR8?enablejsapi=1`
+- Web Edge Lesson 10 — `https://www.youtube.com/embed/bd73cR9QCAA?enablejsapi=1`
+- Web Edge Lesson 11 — `https://www.youtube.com/embed/YjBZOtJM8aU?enablejsapi=1`
+- Web Edge Lesson 12 — `https://www.youtube.com/embed/2fOk8xeW9Tk?enablejsapi=1`
+- Web Edge Lesson 13 — `https://www.youtube.com/embed/m8RK6HYwYwU?enablejsapi=1`
+
+#### Localization sync requirement (EN / SI / TA)
+Localized lesson titles are supported in English, Sinhala, and Tamil. Keep all title keys synchronized in `assets/js/app.js` whenever lesson titles are changed.
 
 ## Migration notes
 - Legacy top-level tutorial pages `step-2.html` through `step-8.html` are redirect pages and should continue to 0-second refresh to `index.html`.
