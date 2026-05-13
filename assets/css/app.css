@@ -295,6 +295,9 @@ h1{
 .section-badge.sec-3{background: color-mix(in oklab, #6366f1 28%, transparent);}
 .section-badge.sec-4{background: color-mix(in oklab, #ec4899 28%, transparent);}
 .section-badge.sec-5{background: color-mix(in oklab, #22c55e 28%, transparent);}
+.section-badge.sec-6{background: color-mix(in oklab, #0ea5e9 28%, transparent);}
+.section-badge.sec-7{background: color-mix(in oklab, #f97316 28%, transparent);}
+.section-badge.sec-8{background: color-mix(in oklab, #8b5cf6 28%, transparent);}
 
 .badges{
   display:flex;
@@ -540,6 +543,24 @@ footer a{color: var(--muted); text-decoration: underline; text-underline-offset:
   border-color: color-mix(in oklab, var(--accent) 58%, var(--line));
   outline: none;
 }
+.section-card[data-section-prog="specialised-templates"]{
+  background:
+    radial-gradient(700px 220px at 0% 0%, color-mix(in oklab, #0ea5e9 28%, transparent), transparent 62%),
+    radial-gradient(700px 220px at 100% 0%, color-mix(in oklab, #38bdf8 24%, transparent), transparent 62%),
+    linear-gradient(160deg, color-mix(in oklab, var(--card2), #0ea5e9 10%), var(--card));
+}
+.section-card[data-section-prog="ecommerce-template"]{
+  background:
+    radial-gradient(700px 220px at 0% 0%, color-mix(in oklab, #f97316 28%, transparent), transparent 62%),
+    radial-gradient(700px 220px at 100% 0%, color-mix(in oklab, #fb923c 24%, transparent), transparent 62%),
+    linear-gradient(160deg, color-mix(in oklab, var(--card2), #f97316 10%), var(--card));
+}
+.section-card[data-section-prog="web-edge"]{
+  background:
+    radial-gradient(700px 220px at 0% 0%, color-mix(in oklab, #8b5cf6 28%, transparent), transparent 62%),
+    radial-gradient(700px 220px at 100% 0%, color-mix(in oklab, #a78bfa 24%, transparent), transparent 62%),
+    linear-gradient(160deg, color-mix(in oklab, var(--card2), #8b5cf6 10%), var(--card));
+}
 .section-card .s-num{
   width: 34px;
   height: 34px;
@@ -628,6 +649,9 @@ footer a{color: var(--muted); text-decoration: underline; text-underline-offset:
 .section-badge.sec-3{background: color-mix(in oklab, #6366f1 28%, transparent);}
 .section-badge.sec-4{background: color-mix(in oklab, #ec4899 28%, transparent);}
 .section-badge.sec-5{background: color-mix(in oklab, #22c55e 28%, transparent);}
+.section-badge.sec-6{background: color-mix(in oklab, #0ea5e9 28%, transparent);}
+.section-badge.sec-7{background: color-mix(in oklab, #f97316 28%, transparent);}
+.section-badge.sec-8{background: color-mix(in oklab, #8b5cf6 28%, transparent);}
 
 @media (min-width: 720px){
   .section-grid{
