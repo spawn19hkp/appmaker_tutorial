@@ -727,6 +727,31 @@ The current style is:
 - Clear lesson progress indicators.
 - Large video-first lesson layout.
 
+### Section colour standards
+
+Use section badge classes consistently so each tutorial section keeps a recognizable colour direction.
+
+| Section name | Badge class | Main colour direction |
+|---|---|---|
+| Basic Lessons – Create Your First App | `sec-1` | Teal to cyan |
+| Things to Do After Launch | `sec-2` | Orange to amber |
+| Advanced Page Creation Options | `sec-3` | Violet to purple |
+| App Creation Using Versa AI | `sec-4` | Emerald to mint |
+| Other Features | `sec-5` | Sky blue to indigo |
+| Specialised Templates | `sec-6` | Rose to pink |
+| E-commerce Template | `sec-7` | Gold to orange |
+| Web Edge | `sec-8` | Indigo to blue |
+
+### Lesson description writing style
+
+- one clear sentence
+- no fluff
+- no emojis
+- English length target (12–22 words)
+- conversational Sinhala/Tamil
+- preserve product/technical names
+- preserve meaning in translation
+
 ### Layout rules
 
 - Keep `.container` max-width behavior.
@@ -978,6 +1003,11 @@ Use this checklist when creating a new lesson page.
 ---
 
 ## Change log
+
+### 2026-05-13
+
+- Added **Section colour standards** with an 8-row mapping table for section name, badge class (`sec-1` through `sec-8`), and main colour direction.
+- Added **Lesson description writing style** with required rules for concise single-sentence copy, translation consistency, and language quality targets.
 
 ### 2026-05-12
 
