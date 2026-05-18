@@ -60,7 +60,7 @@ When updating this file, also update the **Change log** at the bottom.
 
 | Section | Section slug | Badge class | i18n section keys | Total lessons |
 |---|---|---|---|---:|
-| Basic Lessons – Create Your First App | `basic` | `sec-1` | `section1.*` | 9 |
+| Basic Lessons – Create Your First App | `basic` | `sec-1` | `section1.*` | 10 |
 | Things to Do After Launch | `after-launch` | `sec-2` | `section2.*` | 4 |
 | Advanced Page Creation Options | `advanced` | `sec-3` | `section3.*` | 7 |
 | App Creation Using Versa AI | `versa-ai` | `sec-4` | `section4.*` | 4 |
@@ -82,10 +82,11 @@ When updating this file, also update the **Change log** at the bottom.
 | 3 | `Tutorial_Videos/basic-3.html` | `basic3` | How to Add a New Category to Your App |
 | 4 | `Tutorial_Videos/basic-4.html` | `basic4` | How to Create a New Page in Appmaker |
 | 5 | `Tutorial_Videos/basic-5.html` | `basic5` | How to Manage Pages on Your Dashboard |
-| 6 | `Tutorial_Videos/basic-6.html` | `basic6` | How to Customize Your App's Look & Feel |
-| 7 | `Tutorial_Videos/basic-7.html` | `basic7` | How to Change Your App Logo |
-| 8 | `Tutorial_Videos/basic-8.html` | `basic8` | Before You Publish — Add Contact Info, Privacy Policy & About Us |
-| 9 | `Tutorial_Videos/basic-9.html` | `basic9` | How to Publish Your App & Get Approval Fast |
+| 6 | `Tutorial_Videos/basic-6.html` | `basic6` | How to Use the Appmaker Text Editor |
+| 7 | `Tutorial_Videos/basic-7.html` | `basic7` | How to Customize Your App's Look & Feel |
+| 8 | `Tutorial_Videos/basic-8.html` | `basic8` | How to Change Your App Logo |
+| 9 | `Tutorial_Videos/basic-9.html` | `basic9` | Before You Publish — Add Contact Info, Privacy Policy & About Us |
+| 10 | `Tutorial_Videos/basic-10.html` | `basic10` | How to Publish Your App & Get Approval Fast |
 
 ### Things to Do After Launch
 
@@ -663,7 +664,7 @@ When editing or adding lessons, verify all affected navigation.
 
 | Section | Last page | Previous target | Next target |
 |---|---|---|---|
-| Basic | `basic-9.html` | `basic-8.html` | `../index.html` |
+| Basic | `basic-10.html` | `basic-9.html` | `../index.html` |
 | After Launch | `after-launch-4.html` | `after-launch-3.html` | `../index.html` |
 | Advanced | `advanced-6.html` | `advanced-5.html` | `advanced-7.html` |
 | Advanced | `advanced-7.html` | `advanced-6.html` | `../index.html` |
@@ -1023,3 +1024,7 @@ Use this checklist when creating a new lesson page.
 - Documented hub page structure, lesson page structure, i18n key rules, SEO rules, analytics rules, accessibility checklist, styling standards, progress formulas, and current lesson inventory.
 - Added hub visual QA/style expectations for `index.html`: keep spacing between hero and section cards, and prevent repeating background artifacts.
 - Clarified full-page background coverage rules: root-level background ownership, no white gaps on scroll, and prefer `min-height` over fixed `100vh` wrappers.
+
+
+## Change log
+- Appmaker Text Editor lesson inserted as **Basic Lesson 6**; previous Basic lessons 6–9 were shifted to 7–10.
