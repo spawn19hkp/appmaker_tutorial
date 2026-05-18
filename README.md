@@ -34,8 +34,8 @@ Expected path examples (to validate your deploy):
   (which resolve to `/assets/css/app.css`, `/assets/js/app.js`, and `/img/logo.svg`)
 
 ## Tutorial structure
-The primary lesson content is organized under `Tutorial_Videos/` into eight active sections (**57 total lessons**):
-- Basic: 9 lessons (`basic-1.html` to `basic-9.html`)
+The primary lesson content is organized under `Tutorial_Videos/` into eight active sections (**58 total lessons**):
+- Basic: 10 lessons (`basic-1.html` to `basic-10.html`)
 - After Launch: 4 lessons (`after-launch-1.html` to `after-launch-4.html`)
 - Advanced: 7 lessons (`advanced-1.html` to `advanced-7.html`)
 - Versa AI: 4 lessons (`versa-ai-1.html` to `versa-ai-4.html`)
@@ -217,3 +217,7 @@ Use this concise list specifically for the newer sections (**Specialised Templat
   - correct previous/next navigation,
   - correct progress label and bar value,
   - populated EN/SI/TA text blocks.
+
+
+## Change log
+- Inserted **How to Use the Appmaker Text Editor** as **Basic Lesson 6**, shifting previous Basic lessons 6–9 to 7–10.
