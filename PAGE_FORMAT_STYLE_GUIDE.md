@@ -977,6 +977,8 @@ Use this checklist when creating a new lesson page.
 ### QA
 
 - [ ] Run a local static server.
+- [ ] Run `node --check assets/js/app.js` to catch JavaScript parse errors before browser testing.
+- [ ] If any i18n values were edited, confirm no unescaped inner double quotes exist inside string literals (escape as `\"` or use alternate quoting).
 - [ ] Run Playwright visual check.
 - [ ] Test mobile width.
 - [ ] Test desktop width.

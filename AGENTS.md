@@ -141,6 +141,8 @@ VISUAL_BASE_URL=http://127.0.0.1:4173 node tests/visual/check-pages.mjs
 For every changed page:
 
 - Page loads without console errors.
+- Run a JavaScript syntax check before publishing: `node --check assets/js/app.js`.
+- If `assets/js/app.js` i18n strings were edited, verify there are no unescaped inner quotes that can break object literals (for example, `"... \"quoted text\" ..."`).
 - Header brand logo loads.
 - Language buttons work.
 - Theme toggle works.
