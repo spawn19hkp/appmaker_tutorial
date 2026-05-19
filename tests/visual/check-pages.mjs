@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const PAGES = [
+  'index.html',
   'Tutorial_Videos/other-7.html',
   'Tutorial_Videos/other-8.html',
   'Tutorial_Videos/after-launch-4.html'
