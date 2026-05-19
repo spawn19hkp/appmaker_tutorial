@@ -161,9 +161,10 @@ Localized lesson titles are supported in English, Sinhala, and Tamil. Keep all t
 
 
 ## Visual QA checks (AI-friendly)
-A Playwright visual smoke check is included to catch blank/missing lesson text like the issues in `other-7`, `other-8`, and `after-launch-4`.
+A Playwright visual smoke check is included to catch console/runtime issues and blank/missing lesson text like the issues in `other-7`, `other-8`, and `after-launch-4`. The pass now starts from `index.html` and then checks targeted lesson pages.
 
 ### What it checks
+- Captures console errors and page errors for every page in the list
 - Hero title exists
 - Footer title + footer description exist on the right card
 - For Other Features pages, lesson list items 7 and 8 have non-empty title/description
