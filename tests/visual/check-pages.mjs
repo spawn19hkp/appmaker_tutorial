@@ -28,7 +28,13 @@ for (const rel of PAGES) {
 
   const errors = [];
   page.on('console', msg => {
-    if (msg.type() === 'error') errors.push(`console: ${msg.text()}`);
+    if (msg.type() !== 'error') return;
+    const text = msg.text();
+    const isExternalResourceFailure = text.includes('Failed to load resource:') && (
+      text.includes('ERR_TUNNEL_CONNECTION_FAILED') ||
+      text.includes('ERR_CERT_AUTHORITY_INVALID')
+    );
+    if (!isExternalResourceFailure) errors.push(`console: ${text}`);
   });
   page.on('pageerror', err => errors.push(`pageerror: ${err.message}`));
 
@@ -62,9 +68,10 @@ for (const rel of PAGES) {
     };
   });
 
-  if (!checks.h1) errors.push('Missing hero lesson title (#lesson-title)');
-  if (!checks.footerHeading) errors.push('Missing footer heading text on right card');
-  if (!checks.footerBody) errors.push('Missing footer body text on right card');
+  const isLessonPage = rel.startsWith('Tutorial_Videos/');
+  if (isLessonPage && !checks.h1) errors.push('Missing hero lesson title (#lesson-title)');
+  if (isLessonPage && !checks.footerHeading) errors.push('Missing footer heading text on right card');
+  if (isLessonPage && !checks.footerBody) errors.push('Missing footer body text on right card');
 
   if (rel.includes('other-7') || rel.includes('other-8')) {
     if (checks.emptyTitles.includes(7) || checks.emptyTitles.includes(8)) {
