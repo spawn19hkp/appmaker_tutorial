@@ -33,6 +33,33 @@ Expected path examples (to validate your deploy):
 - Shared asset references from a lesson page: `../assets/css/app.css`, `../assets/js/app.js`, `../img/logo.svg`  
   (which resolve to `/assets/css/app.css`, `/assets/js/app.js`, and `/img/logo.svg`)
 
+
+## Production package contents
+
+### Included in production artifact (must be deployable)
+- `index.html`
+- `step-2.html` … `step-8.html` (legacy redirect pages)
+- `Tutorial_Videos/**/*.html`
+- `assets/**`
+- `img/**`
+
+### Excluded from production artifact
+- Markdown docs: `*.md`
+- Test and visual QA files: `tests/**`
+- CI/repository metadata: `.github/**`
+- Review/report directories: `reports/**`, `review-reports/**`
+- Local/editor artifacts: `.DS_Store`, `.vscode/**`, `.idea/**`, swap/temp files
+- Non-runtime tooling files: `package.json`, `package-lock.json`, `node_modules/**`
+
+### Canonical packaging command
+Run this command before a production push:
+
+```bash
+mkdir -p dist && zip -r dist/appmaker-production.zip index.html step-2.html step-3.html step-4.html step-5.html step-6.html step-7.html step-8.html Tutorial_Videos assets img -x "*.md" "tests/*" "tests/**" ".github/*" ".github/**" "reports/*" "reports/**" "review-reports/*" "review-reports/**" ".DS_Store" ".vscode/*" ".vscode/**" ".idea/*" ".idea/**" "*~" "*.swp" "*.swo"
+```
+
+This creates `dist/appmaker-production.zip` containing only deployable static site files.
+
 ## Tutorial structure
 The primary lesson content is organized under `Tutorial_Videos/` into eight active sections (**58 total lessons**):
 - Basic: 10 lessons (`basic-1.html` to `basic-10.html`)

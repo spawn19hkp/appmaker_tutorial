@@ -1,0 +1,27 @@
+name: Production Artifact Guard
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  guard-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build production artifact
+        run: |
+          mkdir -p dist
+          zip -r dist/appmaker-production.zip index.html step-2.html step-3.html step-4.html step-5.html step-6.html step-7.html step-8.html Tutorial_Videos assets img -x "*.md" "tests/*" "tests/**" ".github/*" ".github/**" "reports/*" "reports/**" "review-reports/*" "review-reports/**" ".DS_Store" ".vscode/*" ".vscode/**" ".idea/*" ".idea/**" "*~" "*.swp" "*.swo"
+
+      - name: Validate forbidden paths are excluded
+        run: |
+          unzip -l dist/appmaker-production.zip > dist/artifact-file-list.txt
+          if grep -E '(^| )[^ ]+\.md$| tests/|\.github/| reports/| review-reports/' dist/artifact-file-list.txt; then
+            echo "Forbidden files detected in production artifact"
+            exit 1
+          fi
+          echo "Artifact guard passed"
