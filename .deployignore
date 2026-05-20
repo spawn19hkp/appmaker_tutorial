@@ -1,0 +1,24 @@
+# Documentation
+*.md
+
+# Tests and QA artifacts
+tests/**
+reports/**
+review-reports/**
+
+# CI and repo metadata
+.github/**
+.git/**
+
+# Local/editor/system artifacts
+.DS_Store
+.vscode/**
+.idea/**
+*.swp
+*.swo
+*~
+
+# Node/package manager artifacts (not needed for static deploy output)
+node_modules/**
+package-lock.json
+package.json
